@@ -1,0 +1,13 @@
+# data
+data/raw/*.zip
+data/raw/*.dat
+
+# Python
+__pycache__/
+*.pyc
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac
+.DS_Store
