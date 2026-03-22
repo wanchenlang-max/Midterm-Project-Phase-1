@@ -24,6 +24,11 @@ Files (from the archive) include:
 1. Open `notebooks/01_Data_Cleaning.ipynb`
 2. Run all cells from top to bottom
 3. The notebook downloads `njmin.zip`, extracts to `data/raw/`, loads `public.dat` into pandas, prints `df.head()`, and saves a processed CSV.
+   ## Phase 3 – Extension
+
+In Phase 3, I extend the baseline DID analysis by examining heterogeneous treatment effects. Specifically, I test whether the employment effect of the New Jersey minimum wage increase differs between chain and non-chain restaurants.
+
+I estimate an extended DID model with interaction terms and clustered standard errors, and I visualize the results using seaborn. This extension provides additional insight beyond the average treatment effect reported in the original paper.
 ## Author
 
 wanchen lang
