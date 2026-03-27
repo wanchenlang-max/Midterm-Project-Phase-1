@@ -1,34 +1,55 @@
-# Midterm-Project-Phase-1
-# Replication Study (Phase 1) — Card & Krueger (1994)
+# Midterm Project: Minimum Wage Replication and Extension
 
-## Paper
-Card, D., & Krueger, A. B. (1994). *Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania*. American Economic Review.
+## Executive Memo
 
-## Data Source
-The replication dataset is from David Card's data sets page:
-- https://davidcard.berkeley.edu/data_sets.html
-- Dataset archive: https://davidcard.berkeley.edu/data_sets/njmin.zip
-- Readme: https://davidcard.berkeley.edu/readme/njmin-readme.txt
+### Bottom Line Up Front
 
-Files (from the archive) include:
-- `public.dat` (raw data)
-- `codebook` (data documentation)
-- `.sas` program to read the data
+The New Jersey minimum wage increase did not reduce fast-food employment.  
+Employment in New Jersey slightly increased relative to Pennsylvania after the policy change.  
+This result remains consistent after extending the analysis to compare chain and non-chain restaurants.
 
-## Repository Structure
-- `data/raw/` raw immutable files (never overwrite)
-- `data/processed/` cleaned outputs (CSV/Parquet)
-- `notebooks/` analysis notebooks (`01_Data_Cleaning.ipynb`)
+These findings suggest that moderate minimum wage increases do not necessarily lead to job losses in the fast-food industry.
 
-## How to Run (Colab)
-1. Open `notebooks/01_Data_Cleaning.ipynb`
-2. Run all cells from top to bottom
-3. The notebook downloads `njmin.zip`, extracts to `data/raw/`, loads `public.dat` into pandas, prints `df.head()`, and saves a processed CSV.
-   ## Phase 3 – Extension
+---
 
-In Phase 3, I extend the baseline DID analysis by examining heterogeneous treatment effects. Specifically, I test whether the employment effect of the New Jersey minimum wage increase differs between chain and non-chain restaurants.
+## The Mechanism
 
-I estimate an extended DID model with interaction terms and clustered standard errors, and I visualize the results using seaborn. This extension provides additional insight beyond the average treatment effect reported in the original paper.
-## Author
+This project compares fast-food restaurants in New Jersey and Pennsylvania before and after the minimum wage increase.  
+Pennsylvania serves as a comparison group because its minimum wage did not change.
 
-wanchen lang
+By comparing employment trends across the two states over time, we isolate the policy effect.  
+This approach mimics a natural experiment.
+
+To extend the analysis, I examined whether chain restaurants responded differently than non-chain restaurants.  
+Chain restaurants may have more flexibility to adjust prices or operations, which may affect employment responses.
+
+---
+
+## Visual Evidence
+
+The Phase 3 visualization compares employment before and after the policy change for:
+
+- New Jersey vs Pennsylvania  
+- Chain vs Non-chain restaurants  
+
+The chart shows employment did not fall in New Jersey after the wage increase.  
+Differences across restaurant types are small, suggesting the policy did not negatively affect hiring.
+
+---
+
+## Business / Policy Implications
+
+The results suggest that moderate minimum wage increases may not reduce employment.  
+Firms may adjust through pricing, productivity, or operational changes instead of layoffs.
+
+For policymakers, this indicates that raising wages for low-income workers may not create major job losses.  
+For businesses, the results suggest wage increases can be absorbed without large reductions in staffing.
+
+---
+
+## Reproducibility
+
+To reproduce this project:
+
+1. Clone the repository
+2. Run notebooks in order:
